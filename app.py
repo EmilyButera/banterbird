@@ -10,15 +10,16 @@ def index():
 @app.route('/api/posts')
 def get_posts():
     with(open("data.json", "r")) as file:
-        post = json.load(file)
+        posts = json.load(file)
+    return jsonify(posts)
 
 @app.route('/api/posts', methods=['POST'])
-def add_post():
+def add_posts():
     new_post = request.get_json()
     with(open("data.json", "r")) as file:
-        post = json.load(file)
-        post.insert(0, new_post)
-    with(open("data.json", "r")) as file:
+        posts = json.load(file)
+        posts.insert(0, new_post)
+    with(open("data.json", "w")) as file:
         json.dump(posts, file, indent=4)
     return jsonify({"status": "sucess"}), 201
 
