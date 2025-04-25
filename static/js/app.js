@@ -37,7 +37,7 @@ window.onload = async() => {
     try {
         const response = await fetch("/api/posts");
         const posts = await response.json();
-        posts.forEach((posts) => renderPost(post));
+        posts.forEach((posts) => renderPost(posts));
 
     } catch (error) {
         console.error("Error fetching post", error)

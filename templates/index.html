@@ -2,16 +2,21 @@
 <html>
 <head>
     <title>Banterbird</title>
+    <link rel="stylesheet" href="/static/js/css/style.css">
     <script src="/static/js/app.js" defer></script>
 </head>
 <body>
     <h1>Banterbird</h1>
-    <div>
+    <br>
+    <div class="login">
         Logged in as: <strong id="username">admin</strong>
     </div>
+    <br>
     <div>
         <h3>New Post</h3>
+        <br>
         <textarea id="postInput" placeholder="What's on your mind?"></textarea><br>
+        <br>
         <button onclick="submitPost()">Tweet</button>
     </div>
     <hr>
@@ -20,9 +25,11 @@
 
     <template id="post-template">
         <div class="post">
-            <p><strong class="username"></strong>: <span class="message"></span></p>
+            <img src="https://external-preview.redd.it/0UF4Gqxwe330DKxNz1_GpmkwIDX0e_TyJdXbbkDVm78.jpg?auto=webp&s=5274a519198bd315bd9eb50c2cee0d9a7e0e8126" height= "50" width="50" style="float:left;"/>
+            <p><style="float:right;"><strong class="username"></strong>: <span class="message"></span></p>
             <small class="timestamp"></small>
-            <hr>
+            <br>
+            <br>
         </div>
     </template>
 </body>
