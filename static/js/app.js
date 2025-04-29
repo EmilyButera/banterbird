@@ -1,4 +1,7 @@
-const username = "admin";
+let username = localStorage.getItem("username");
+if(!username){
+  window.location.href = "/login"
+}
 
 function renderPost(post, isNew = false) {
     const template = document.getElementById("post-template").content.cloneNode(true);
@@ -27,7 +30,6 @@ async function submitPost() {
       console.error("Error submitting post:", error);
     }
   }
-
   window.onload = async () => {
     try {
       const response = await fetch("/api/posts");

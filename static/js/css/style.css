@@ -32,9 +32,14 @@ h3{
     border-radius: 25px;
     background: #ffffff;
     padding: 20px;
-    width: 200px;
+    width: 400px;
     height: 50px;
   font-family: 'Trebuchet MS', sans-serif;
+}
+
+.post:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
 h1{
@@ -58,13 +63,22 @@ button{
     display: inline-block;
     font-size: 16px;
 }
+button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 textarea{
     margin: auto;
     border-radius: 25px;
     background: #ffffff;
     padding: 20px;
-    width: 200px;
-    height: 30;
+    width: 500px;
+    height: 70px;
     font-family: 'Trebuchet MS', sans-serif;
 }
 
@@ -97,3 +111,60 @@ textarea{
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #5c5c5c; 
+  }
+
+  body.dark-mode {
+    background-image: url("https://t3.ftcdn.net/jpg/00/92/57/76/360_F_92577670_M5qmsjtBd36X6YD7b2zUwmqqUXOmwVn9.jpg");
+    color: #000000;
+}
+
+.dark-mode textarea,
+.dark-mode button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode .post {
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+    background: #2c2c2c;
+    padding: 20px;
+    width: 400px;
+    height: 50px;
+    color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+.dark-mode h1{
+    margin: auto;
+    border-radius: 25px;
+    background: #2c2c2c;
+    padding: 20px;
+    width: 200px;
+    height: 30;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.dark-mode h3{
+    margin: auto;
+    border-radius: 25px;
+    background: #2c2c2c;
+    padding: 20px;
+    width: 200px;
+    height: 30;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.dark-mode .login{
+    margin: auto;
+    border-radius: 25px;
+    background: #2c2c2c;
+    padding: 20px;
+    width: 200px;
+    height: 30;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+}

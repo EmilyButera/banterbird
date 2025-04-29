@@ -18,8 +18,11 @@
         <textarea id="postInput" placeholder="What's on your mind?"></textarea><br>
         <br>
         <button onclick="submitPost()">Tweet</button>
+        <br>
+        <br>
+        <button onclick="darkmode()">Change Brightness</button>
     </div>
-    <hr>
+    <br>
     <h3>Feed</h3>
     <div id="feed"></div>
 
@@ -29,6 +32,28 @@
             <p><style="float:right;"><strong class="username"></strong>: <span class="message"></span></p>
             <small class="timestamp"></small>
         </div>
+        <br>
     </template>
+    <script>
+        document.getElementById("username").innerText = localStorage.getItem("username");
+    </script>
+    <script>
+        document.getElementById("username").innerText = localStorage.getItem("username");
+    
+        function darkmode() {
+            document.body.classList.toggle('dark-mode');
+    
+            // Optional: save preference
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDark);
+        }
+    
+        // Load saved preference
+        window.onload = () => {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+        };
+    </script>
 </body>
 </html>
