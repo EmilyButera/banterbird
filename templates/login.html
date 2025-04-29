@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/js/css/style.css">
+    <script src="/static/js/app.js" defer></script>
+</head>
     <input id="usernameInput" placeHolder="Enter username"/>
+    <br>
+    <br>
     <button onclick='login()'>Login</button>
-    <script>
-        function login(){
-            const username = document.getElementById("usernameInput").value.trim();
-            if(username.length > 0){
-                localStorage.setItem("username", username);
-                window.location.href = "/";
-            }else{
-                alert("Please enter a username.");
-            }
-        }
-    </script>
+        
 </html>

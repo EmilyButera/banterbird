@@ -82,6 +82,35 @@ textarea{
     font-family: 'Trebuchet MS', sans-serif;
 }
 
+input{
+    margin: auto;
+    border-radius: 25px;
+    background: #ffffff;
+    padding: 20px;
+    width: 250;
+    height: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+label{
+    margin: auto;
+    border-radius: 25px;
+    background: #ffffff;
+    padding: 20px;
+    width: 250;
+    height: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+option{
+    margin: auto;
+    border-radius: 25px;
+    background: #ffffff;
+    padding: 20px;
+    width: 250;
+    height: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+
 .login{
     margin: auto;
     border-radius: 25px;
