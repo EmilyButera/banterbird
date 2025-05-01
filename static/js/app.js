@@ -30,6 +30,7 @@ async function submitPost() {
       console.error("Error submitting post:", error);
     }
   }
+
   window.onload = async () => {
     try {
       const response = await fetch("/api/posts");
