@@ -1,4 +1,4 @@
-let username = localStorage.getItem("usernameInput");
+let username = localStorage.getItem("username");
 if(!username){
   window.location.href = "/login"
 }
