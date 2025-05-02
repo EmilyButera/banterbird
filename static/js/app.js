@@ -1,4 +1,4 @@
-let username = localStorage.getItem("username");
+let username = localStorage.getItem("usernameInput");
 if(!username){
   window.location.href = "/login"
 }
@@ -30,6 +30,17 @@ async function submitPost() {
       console.error("Error submitting post:", error);
     }
   }
+
+  setInterval(async () => {
+    try{
+      const response = await fetch ("/api/posts");
+      const post = await respnose.json();
+      document.getElementById("feed").innerHTML = "";
+      posts.forEach((post) => renderPost(post));
+     } catch(error){
+        console.error("Error polling for posts")
+      }
+  }, 5000);
 
   window.onload = async () => {
     try {
